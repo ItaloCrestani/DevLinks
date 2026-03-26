@@ -76,7 +76,7 @@ export function Networks() {
 
         <button
         type="submit"
-        className="text-white bg-blue-600 h-9 rounded-md items-center justify-center flex mb-7 font-medium"
+        className="text-white bg-blue-600 hover:bg-blue-600/90 h-9 rounded-md items-center justify-center flex mb-7 font-medium cursor-pointer transition duration-300 ease"
         >
           Salvar links
         </button>

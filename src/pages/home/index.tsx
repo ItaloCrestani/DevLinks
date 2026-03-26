@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { FaYoutube, FaInstagram, FaFacebook } from "react-icons/fa"
+import { BiLogIn, BiShield } from "react-icons/bi"
 import { Social } from "../../components/social"
 import { db } from "../../services/firebaseConnection"
 import { getDocs, collection, orderBy, query, doc, getDoc } from "firebase/firestore"
+import { Link } from "react-router"
 
 interface LinkProps{
   id: string,
@@ -89,7 +91,7 @@ export function Home() {
         ))}
 
         { socialLinks && Object.keys(socialLinks).length > 0 && (
-          <footer className="flex justify-center gap-3 my-4">
+          <footer className="flex justify-center gap-4 my-4">
             <Social url={socialLinks?.facebook}>
               <FaFacebook size={35} color="white"/>
             </Social>
@@ -103,6 +105,12 @@ export function Home() {
             </Social>
           </footer>
         )}
+
+        <div className="flex justify-center items-center mt-3">
+          <Link to="/admin" className="flex items-center text-gray-300 hover:text-gray-200 transition duration-300 ease cursor-pointer">
+            Admin <BiLogIn/>
+          </Link>
+        </div>
         
       </main>
     </div>

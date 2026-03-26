@@ -105,18 +105,18 @@ export function Admin() {
         />
 
         <section className="flex my-4 gap-5">
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <label className="text-white font-medium mt-2 mb-2">Cor do Link</label>
-            <input
+            <input className="h-10"
             type="color" 
             value={textColorInput}
             onChange={(e) => setTextColorInput(e.target.value)}
             />
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <label className="text-white font-medium mt-2 mb-2">Fundo do Link</label>
-            <input 
+            <input className="h-10"
             type="color" 
             value={bgColorInput}
             onChange={(e) => setBgColorInput(e.target.value)}
@@ -138,14 +138,14 @@ export function Admin() {
 
         <button 
         type="submit" 
-        className="mb-7 bg-blue-600 h-9 rounded-md text-white font-medium gap-4 flex justify-center items-center cursor-pointer"
+        className="mb-7 bg-blue-600 hover:bg-blue-600/90 h-9 rounded-md text-white font-medium gap-4 flex justify-center items-center cursor-pointer transition duration-300 ease"
         >
           Cadastrar
         </button>
       </form>
 
       <h2 className="font-bold text-white mb-4 text-2xl">
-        Meu Links
+        Meus Links
       </h2>
 
       {links.map( (link) => (
@@ -157,7 +157,7 @@ export function Admin() {
           <p>{link.name}</p>
           <div>
             <button 
-              className="border border-dashed p-1 rounded"
+              className="border border-dashed p-1 rounded cursor-pointer"
               onClick={ () => handleDeleteLink(link.id)}
             >
               <FiTrash size={18} color="#FFF"/>
