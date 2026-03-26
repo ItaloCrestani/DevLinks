@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { FaYoutube, FaInstagram, FaFacebook } from "react-icons/fa"
-import { BiLogIn, BiShield } from "react-icons/bi"
+import { BiLogIn } from "react-icons/bi"
 import { Social } from "../../components/social"
 import { db } from "../../services/firebaseConnection"
 import { getDocs, collection, orderBy, query, doc, getDoc } from "firebase/firestore"
