@@ -27,3 +27,5 @@ A proposta é ser uma alternativa simples e eficiente para páginas de bio com l
 ## 💻 Projeto
 
 - [Acesse o projeto finalizado, online](https://dev-links-ashen.vercel.app/)
+
+- 🔒 Admin: user@test.com | Password: 123456
